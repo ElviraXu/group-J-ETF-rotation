@@ -1,0 +1,22 @@
+{
+  "data": {
+    "prices_csv": "data/processed/prices_clean.csv",
+    "calendar_sse_csv": "data/processed/calendar_SSE.csv",
+    "calendar_szse_csv": "data/processed/calendar_SZSE.csv",
+    "targets_csv": "data/signals/targets.csv",
+    "results_dir": "results"
+  },
+  "asset_pool": ["510300.SH", "510500.SH", "159915.SZ", "518880.SH"],
+  "account": {"initial_cash": 100000.0, "fee_rate": 0.0003, "slippage": 0.0002, "cash_yield": 0.0},
+  "backtest": {"start_date": "2016-01-01", "end_date": "2025-12-31", "benchmark_symbol": "510300.SH"},
+  "sample_splits": {
+    "dev": {"start": "2016-01-01", "end": "2021-12-31"},
+    "valid": {"start": "2022-01-01", "end": "2023-12-31"},
+    "test": {"start": "2024-01-01", "end": "2025-12-31"}
+  },
+  "cost_experiments": [
+    {"name": "zero_cost", "fee_rate": 0.0, "slippage": 0.0},
+    {"name": "base_cost", "fee_rate": 0.0003, "slippage": 0.0002},
+    {"name": "double_cost", "fee_rate": 0.0006, "slippage": 0.0004}
+  ]
+}
